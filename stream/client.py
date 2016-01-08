@@ -225,6 +225,14 @@ class StreamClient(object):
         data = {'activity': activity, 'feeds': feeds}
         self._make_signed_request('post', 'feed/add_to_many/', data=data)
 
+    def follow_suggestions(self, user_id, limit=20):
+        '''
+        Get follow suggestions for the given user
+        :param user_id: the user id for who to get follow suggestions
+        '''
+        self._make_signed_request('get', 'follow_suggestions/%s/' % user_id, params=dict(limit=limit))
+
+
     def follow_many(self, follows):
         '''
         Creates many follows

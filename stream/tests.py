@@ -177,7 +177,11 @@ class ClientTest(TestCase):
         # and the flat feed
         activities = team_follower_feed.get(limit=1)['results']
         self.assertFirstActivityIDNotEqual(activities, activity_id)
-        
+
+    def test_get_follow_suggestions(self):
+        user_id = '13'
+        suggestions = client.follow_suggestions(user_id)
+
     def assertFirstActivityIDEqual(self, activities, correct_activity_id):
         activity_id = None
         if activities:
