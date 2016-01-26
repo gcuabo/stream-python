@@ -230,7 +230,8 @@ class StreamClient(object):
         Get follow suggestions for the given user
         :param user_id: the user id for who to get follow suggestions
         '''
-        self._make_signed_request('get', 'follow_suggestions/%s/' % user_id, params=dict(limit=limit))
+        result = self._make_signed_request('get', 'follow_suggestions/%s/' % user_id, params=dict(limit=limit))
+        return result
 
 
     def follow_many(self, follows):
