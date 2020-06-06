@@ -18,7 +18,7 @@ import datetime
 import datetime as dt
 import copy
 import requests
-from stream import serializer
+from stream_python import serializer
 from requests.exceptions import MissingSchema
 from itertools import count
 from uuid import uuid1

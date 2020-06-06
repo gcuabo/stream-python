@@ -3,7 +3,7 @@
 
 from setuptools import setup, find_packages
 from setuptools.command.test import test as TestCommand
-from stream import __version__, __maintainer__, __email__, __license__
+from stream_python import __version__, __maintainer__, __email__, __license__
 import sys
 
 unit = "unittest2py3k" if sys.version_info > (3, 0, 0) else "unittest2"

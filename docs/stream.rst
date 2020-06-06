@@ -1,4 +1,4 @@
-stream package
+stream_python package
 ==============
 
 Submodules

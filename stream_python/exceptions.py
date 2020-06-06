@@ -155,7 +155,7 @@ class NotAllowedException(StreamApiException):
 
 
 def get_exceptions():
-    from stream import exceptions
+    from stream_python import exceptions
 
     classes = []
     for k in dir(exceptions):

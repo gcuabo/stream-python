@@ -5,9 +5,9 @@ stream-python
 
 [stream-python](https://github.com/GetStream/stream-python) is the official Python client for [Stream](https://getstream.io/), a web service for building scalable newsfeeds and activity streams.
 
-Note there is also a higher level [Django - Stream integration](https://github.com/getstream/stream-django) library which hooks into the Django ORM.
+Note there is also a higher level [Django - stream_python integration](https://github.com/getstream/stream-django) library which hooks into the Django ORM.
 
-You can sign up for a Stream account at https://getstream.io/get_started.
+You can sign up for a stream_python account at https://getstream.io/get_started.
 
 ### Installation
 
@@ -23,7 +23,7 @@ pip install stream-python
 
 ### Full documentation
 
-Documentation for this Python client are available at the [Stream website](https://getstream.io/docs/?language=python) or on [Read the Docs](http://stream-python.readthedocs.org/en/latest/).
+Documentation for this Python client are available at the [stream_python website](https://getstream.io/docs/?language=python) or on [Read the Docs](http://stream-python.readthedocs.org/en/latest/).
 
 ### Usage
 
@@ -124,7 +124,7 @@ user_token = client.create_user_token("user-42")
 # Javascript client side feed initialization
 # client = stream.connect(apiKey, userToken, appId);
 
-# Generate a redirect url for the Stream Analytics platform to track
+# Generate a redirect url for the stream_python Analytics platform to track
 # events/impressions on url clicks
 impression = {
     'content_list': ['tweet:1', 'tweet:2', 'tweet:3'],
@@ -157,7 +157,7 @@ First, make sure you can run the test suite. Tests are run via py.test
 ```bash
 py.test
 # with coverage
-py.test --cov stream --cov-report html
+py.test --cov stream_python --cov-report html
 # against a local API backend
 LOCAL=true py.test
 ```

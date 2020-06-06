@@ -50,7 +50,7 @@ class Collections(object):
     def select(self, collection_name, ids):
         """
         Retrieve data from meta endpoint, can include data you've uploaded or personalization/analytic data
-        created by the stream team.
+        created by the stream_python team.
         :param collection_name: Collection Name i.e 'user'
         :param ids: list of ids of feed group i.e [123,456]
         :return: meta data as json blob

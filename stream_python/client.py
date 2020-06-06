@@ -6,7 +6,7 @@ import jwt
 import requests
 from stream.serializer import _datetime_encoder
 
-from stream import exceptions, serializer
+from stream_python import exceptions, serializer
 from stream.users import Users
 from stream.utils import validate_feed_slug, validate_user_id, validate_foreign_id_time
 from requests import Request
@@ -150,7 +150,7 @@ class StreamClient(object):
         return url
 
     def get_user_agent(self):
-        from stream import __version__
+        from stream_python import __version__
 
         agent = "stream-python-client-%s" % __version__
         return agent
@@ -225,7 +225,7 @@ class StreamClient(object):
             timeout=self.timeout,
         )
         logger.debug(
-            "stream api call %s, headers %s data %s", response.url, headers, data
+            "stream_python api call %s, headers %s data %s", response.url, headers, data
         )
         return self._parse_response(response)
 
